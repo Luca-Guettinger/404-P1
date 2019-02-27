@@ -20,7 +20,8 @@ public class InternalScanner {
             while (true) {
                 var r = scanner.next();
                 if (r.equalsIgnoreCase("stop")) {
-                    System.out.println(((IStopable) program).getStopMessage());
+                    IStopable program = (IStopable) this.program;
+                    program.stop();
                     break;
                 }
 
@@ -43,7 +44,8 @@ public class InternalScanner {
         String next = scanner.next();
         if (program instanceof IStopable) {
             if (next.equalsIgnoreCase("stop")) {
-                System.out.println(((IStopable) program).getStopMessage());
+                IStopable program = (IStopable) this.program;
+                program.stop();
                 return null;
             }
         }
@@ -56,7 +58,8 @@ public class InternalScanner {
                 String next = scanner.next();
                 if (program instanceof IStopable) {
                     if (next.equalsIgnoreCase("stop")) {
-                        System.out.println(((IStopable) program).getStopMessage());
+                        IStopable program = (IStopable) this.program;
+                        program.stop();
                         break;
                     }
                 }

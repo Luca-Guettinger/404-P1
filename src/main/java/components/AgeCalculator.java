@@ -1,12 +1,10 @@
 package components;
 
 import api.IStopable;
-import api.InternalScanner;
 import api.Program;
 
 import java.time.LocalDate;
 import java.time.Period;
-import java.util.Scanner;
 
 public class AgeCalculator implements Program, IStopable {
 
@@ -19,15 +17,5 @@ public class AgeCalculator implements Program, IStopable {
         var years = Period.between(birthday, LocalDate.now()).getYears();
 
         System.out.println("you are "+years + " years old!");
-    }
-
-    @Override
-    public InternalScanner getScanner() {
-        return new InternalScanner(new Scanner(System.in), this);
-    }
-
-    @Override
-    public String getStopMessage() {
-        return "shuting down program";
     }
 }

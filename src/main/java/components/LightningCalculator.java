@@ -17,14 +17,4 @@ public class LightningCalculator implements Program, IStopable {
 
         System.out.println("distance: " + distance + " km");
     }
-
-    @Override
-    public InternalScanner getScanner() {
-        return new InternalScanner(new Scanner(System.in), this);
-    }
-
-    @Override
-    public String getStopMessage() {
-        return "shuting down program";
-    }
 }
