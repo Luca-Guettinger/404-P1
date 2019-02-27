@@ -7,10 +7,14 @@ import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.util.Scanner;
 
-@RequiredArgsConstructor
 public class InternalScanner {
     private final Scanner scanner;
     private final Program program;
+
+    public InternalScanner(Scanner scanner, Program program) {
+        this.scanner = scanner;
+        this.program = program;
+    }
 
     public Double nextDouble(String invalidInputMessage) {
         if (!(program instanceof IStopable)) {

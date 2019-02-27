@@ -6,7 +6,7 @@ import api.Program;
 import java.time.LocalDate;
 import java.time.Period;
 
-public class AgeCalculator implements Program, IStopable {
+public class AgeCalculatorService implements Program, IStopable {
 
     @Override
     public void execute() {
@@ -14,6 +14,9 @@ public class AgeCalculator implements Program, IStopable {
 
         LocalDate birthday = getScanner().getDate("dd-MM-yyyy",
                 "please retry with the following format: dd-mm-yyyy, or type \"stop\" to end the program!");
+        if (birthday == null)
+            return;
+
         var years = Period.between(birthday, LocalDate.now()).getYears();
 
         System.out.println("you are "+years + " years old!");

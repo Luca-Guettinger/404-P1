@@ -6,7 +6,7 @@ import api.Program;
 
 import java.util.Scanner;
 
-public class LightningCalculator implements Program, IStopable {
+public class LightningCalculatorService implements Program, IStopable {
     @Override
     public void execute() {
         System.out.println("enter the time in seconds between the lightning and the thunder:");
