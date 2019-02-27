@@ -10,17 +10,17 @@ import java.util.Scanner;
 @RequiredArgsConstructor
 public class InternalScanner {
     private final Scanner scanner;
-    private final Program stopable;
+    private final Program program;
 
     public Double nextDouble(String invalidInputMessage) {
-        if (!(stopable instanceof IStopable)) {
+        if (!(program instanceof IStopable)) {
             return scanner.nextDouble();
 
         }else {
             while (true) {
                 var r = scanner.next();
                 if (r.equalsIgnoreCase("stop")) {
-                    System.out.println(((IStopable)stopable).getStopMessage());
+                    System.out.println(((IStopable) program).getStopMessage());
                     break;
                 }
 
@@ -36,14 +36,14 @@ public class InternalScanner {
     }
 
     /**
-     * if stopable is true, "stop" can not be used as a input string because it is used to stop the program.
+     * if program is true, "stop" can not be used as a input string because it is used to stop the program.
      * @return
      */
     public String next() {
         String next = scanner.next();
-        if (stopable instanceof IStopable) {
+        if (program instanceof IStopable) {
             if (next.equalsIgnoreCase("stop")) {
-                System.out.println(((IStopable)stopable).getStopMessage());
+                System.out.println(((IStopable) program).getStopMessage());
                 return null;
             }
         }
@@ -54,9 +54,9 @@ public class InternalScanner {
         while (true) {
             try {
                 String next = scanner.next();
-                if (stopable instanceof IStopable) {
+                if (program instanceof IStopable) {
                     if (next.equalsIgnoreCase("stop")) {
-                        System.out.println(((IStopable)stopable).getStopMessage());
+                        System.out.println(((IStopable) program).getStopMessage());
                         break;
                     }
                 }

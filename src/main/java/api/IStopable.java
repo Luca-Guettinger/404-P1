@@ -1,5 +1,7 @@
 package api;
 
 public interface IStopable {
-    String getStopMessage();
+    default String getStopMessage() {
+        return "shuting down program";
+    }
 }

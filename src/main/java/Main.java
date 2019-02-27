@@ -15,7 +15,5 @@ public class Main {
                 new AgeCalculator().execute();
                 break;
         }
-
-
     }
 }

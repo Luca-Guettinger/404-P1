@@ -4,6 +4,8 @@ import api.IStopable;
 import api.InternalScanner;
 import api.Program;
 
+import java.util.Scanner;
+
 public class CelciusToFahrenheit implements Program, IStopable {
     @Override
     public void execute() {
@@ -11,12 +13,12 @@ public class CelciusToFahrenheit implements Program, IStopable {
     }
 
     @Override
-    public String getStopMessage() {
-        return null;
+    public InternalScanner getScanner() {
+        return new InternalScanner(new Scanner(System.in), this);
     }
 
     @Override
-    public InternalScanner getScanner() {
-        return null;
+    public String getStopMessage() {
+        return "shuting down program";
     }
 }
