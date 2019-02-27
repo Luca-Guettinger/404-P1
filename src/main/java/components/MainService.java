@@ -17,7 +17,7 @@ public class MainService implements Program, IStopable {
                     new LightningCalculatorService().execute();
                     break;
                 case "2":
-                    new CelciusToFahrenheitService().execute();
+                    new CelsiusToFahrenheitService().execute();
                     break;
                 case "3":
                     new AgeCalculatorService().execute();
