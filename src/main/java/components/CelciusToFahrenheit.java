@@ -9,7 +9,7 @@ public class CelciusToFahrenheit implements Program, IStopable {
     public void execute() {
 
     }
-    
+
     @Override
     public String getStopMessage() {
         return null;
