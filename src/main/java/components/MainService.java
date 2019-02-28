@@ -9,7 +9,7 @@ public class MainService implements Program, IStopable {
     public void execute() {
         printHelp();
 
-        var input = getScanner().next();
+        var input = this.getScanner().next();
 
         while (input != null) {
             switch (input) {
@@ -26,7 +26,7 @@ public class MainService implements Program, IStopable {
                     break;
             }
             printHelp();
-            input = getScanner().next();
+            input = this.getScanner().next();
         }
     }
 

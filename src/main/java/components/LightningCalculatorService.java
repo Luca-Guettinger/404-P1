@@ -1,10 +1,7 @@
 package components;
 
 import api.IStopable;
-import api.InternalScanner;
 import api.Program;
-
-import java.util.Scanner;
 
 public class LightningCalculatorService implements Program, IStopable {
     @Override

@@ -1,12 +1,14 @@
 package api;
 
-import lombok.RequiredArgsConstructor;
-
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.util.Scanner;
 
+/**
+ * this is a implementation if the java.util.Scanner that is capable of getting a date from a pattern,
+ * and is also able to handle the implementaiton of {@Link IStopable}.
+ */
 public class InternalScanner {
     private final Scanner scanner;
     private final Program program;
@@ -16,6 +18,10 @@ public class InternalScanner {
         this.program = program;
     }
 
+    /**
+     * @param invalidInputMessage message that gets sent if the enterd value is invalid.
+     * @return returns the next Double that is entered.
+     */
     public Double nextDouble(String invalidInputMessage) {
         if (!(program instanceof IStopable)) {
             return scanner.nextDouble();
@@ -41,8 +47,8 @@ public class InternalScanner {
     }
 
     /**
-     * if program is true, "stop" can not be used as a input string because it is used to stop the program.
-     * @return
+     * if the program class implements the IStopable Interface is true, "stop" can not be used as a input string because it is used to stop the program.
+     * @return the next String that the User put in the Console.
      */
     public String next() {
         String next = scanner.next();
@@ -56,6 +62,11 @@ public class InternalScanner {
         return next;
     }
 
+    /**
+     * @param pattern the date Pattern
+     * @param invalidInputMessage message that gets sent if the entered value is invalid.
+     * @return Returns the next entered date that fits the input Pattern
+     */
     public LocalDate getDate(String pattern, String invalidInputMessage) {
         while (true) {
             try {
