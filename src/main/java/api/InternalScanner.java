@@ -25,7 +25,6 @@ public class InternalScanner {
     public Double nextDouble(String invalidInputMessage) {
         if (!(program instanceof IStopable)) {
             return scanner.nextDouble();
-
         }else {
             while (true) {
                 var r = scanner.next();
@@ -40,7 +39,6 @@ public class InternalScanner {
                 }catch (NumberFormatException ex) {
                     System.out.println(invalidInputMessage + "\n" + ex.getMessage());
                 }
-
             }
             return null;
         }

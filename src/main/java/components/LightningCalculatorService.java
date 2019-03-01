@@ -1,9 +1,8 @@
 package components;
 
-import api.IStopable;
 import api.Program;
 
-public class LightningCalculatorService implements Program, IStopable {
+public class LightningCalculatorService implements Program {
     @Override
     public void execute() {
         System.out.println("enter the time in seconds between the lightning and the thunder:");
