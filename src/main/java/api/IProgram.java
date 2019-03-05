@@ -5,7 +5,6 @@ import java.util.Scanner;
 
 /**
  * This interface is used to mark a class as a Main Class for a IProgram
- *
  */
 public interface IProgram {
     /**
@@ -22,5 +21,4 @@ public interface IProgram {
     default InternalScanner getScanner() {
         return new InternalScanner(new Scanner(System.in), this);
     }
-
 }

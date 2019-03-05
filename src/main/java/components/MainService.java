@@ -3,6 +3,9 @@ package components;
 import api.IProgram;
 import api.IStopable;
 
+/**
+ * Main Service that is executed on Program start. This determins witch sub Service is started next!
+ */
 public class MainService implements IProgram, IStopable {
 
     @Override

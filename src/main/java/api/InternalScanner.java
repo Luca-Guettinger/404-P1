@@ -77,7 +77,6 @@ public class InternalScanner {
                         DateTimeFormatter.ofPattern(pattern));
             }catch (DateTimeParseException ex) {
                 System.out.println(invalidInputMessage + "\n" + ex.getMessage());
-                break;
             }
         }
         return null;
