@@ -23,25 +23,21 @@ public class InternalScanner {
      * @return returns the next Double that is entered.
      */
     public Double nextDouble(String invalidInputMessage) {
-        if (!(IProgram instanceof IStopable)) {
-            return scanner.nextDouble();
-        }else {
-            while (true) {
-                var r = scanner.next();
-                if (r.equalsIgnoreCase("stop")) {
-                    IStopable program = (IStopable) this.IProgram;
-                    program.stop();
-                    break;
-                }
-
-                try {
-                    return Double.parseDouble(r);
-                }catch (NumberFormatException ex) {
-                    System.out.println(invalidInputMessage + "\n" + ex.getMessage());
-                }
+        while (true) {
+            var r = scanner.next();
+            if (IProgram instanceof IStopable && r.equalsIgnoreCase("stop")) {
+                IStopable program = (IStopable) this.IProgram;
+                program.stop();
+                break;
             }
-            return null;
+
+            try {
+                return Double.parseDouble(r);
+            }catch (NumberFormatException ex) {
+                System.out.println(invalidInputMessage + "\n" + ex.getMessage());
+            }
         }
+        return null;
     }
 
     /**

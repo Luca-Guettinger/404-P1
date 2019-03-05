@@ -33,7 +33,7 @@ public class MainService implements IProgram, IStopable {
     private static void printHelp() {
         System.out.println("==========================================================");
         System.out.println("1 - this program calculates the distance of lightning.");
-        System.out.println("2 - this program converts Celcius to Fahrenheit and vice versa.");
+        System.out.println("2 - this program converts Celsius to Fahrenheit and vice versa.");
         System.out.println("3 - this program calculates the age of a person.");
         System.out.println("==========================================================");
         System.out.println("enter a number to start a different part of the IProgram.");

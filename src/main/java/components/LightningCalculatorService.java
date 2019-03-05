@@ -9,8 +9,6 @@ public class LightningCalculatorService implements IProgram {
 
         var time = getScanner().nextDouble("ungültige Zahl.");
 
-        double distance = time / 3;
-
-        System.out.println("distance: " + distance + " km");
+        System.out.println("distance: " + time / 3 + " km");
     }
 }
