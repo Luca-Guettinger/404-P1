@@ -1,9 +1,9 @@
 package components;
 
+import api.IProgram;
 import api.IStopable;
-import api.Program;
 
-public class MainService implements Program, IStopable {
+public class MainService implements IProgram, IStopable {
 
     @Override
     public void execute() {
@@ -36,6 +36,6 @@ public class MainService implements Program, IStopable {
         System.out.println("2 - this program converts Celcius to Fahrenheit and vice versa.");
         System.out.println("3 - this program calculates the age of a person.");
         System.out.println("==========================================================");
-        System.out.println("enter a number to start a different part of the Program.");
+        System.out.println("enter a number to start a different part of the IProgram.");
     }
 }

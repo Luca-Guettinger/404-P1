@@ -1,12 +1,12 @@
 package components;
 
 import api.IStopable;
-import api.Program;
+import api.IProgram;
 
 import java.time.LocalDate;
 import java.time.Period;
 
-public class AgeCalculatorService implements Program, IStopable {
+public class AgeCalculatorService implements IProgram, IStopable {
 
     @Override
     public void execute() {

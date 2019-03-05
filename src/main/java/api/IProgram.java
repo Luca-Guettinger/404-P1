@@ -4,12 +4,12 @@ import java.util.Scanner;
 
 
 /**
- * This interface is used to mark a class as a Main Class for a Program
+ * This interface is used to mark a class as a Main Class for a IProgram
  *
  */
-public interface Program {
+public interface IProgram {
     /**
-     * every Program needs to have some sort of implementation of this Method. this is the method that is executed by
+     * every IProgram needs to have some sort of implementation of this Method. This is the method that is executed
      * in the Main Method.
      */
     void execute();

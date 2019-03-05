@@ -11,11 +11,11 @@ import java.util.Scanner;
  */
 public class InternalScanner {
     private final Scanner scanner;
-    private final Program program;
+    private final IProgram IProgram;
 
-    public InternalScanner(Scanner scanner, Program program) {
+    public InternalScanner(Scanner scanner, IProgram IProgram) {
         this.scanner = scanner;
-        this.program = program;
+        this.IProgram = IProgram;
     }
 
     /**
@@ -23,13 +23,13 @@ public class InternalScanner {
      * @return returns the next Double that is entered.
      */
     public Double nextDouble(String invalidInputMessage) {
-        if (!(program instanceof IStopable)) {
+        if (!(IProgram instanceof IStopable)) {
             return scanner.nextDouble();
         }else {
             while (true) {
                 var r = scanner.next();
                 if (r.equalsIgnoreCase("stop")) {
-                    IStopable program = (IStopable) this.program;
+                    IStopable program = (IStopable) this.IProgram;
                     program.stop();
                     break;
                 }
@@ -45,14 +45,14 @@ public class InternalScanner {
     }
 
     /**
-     * if the program class implements the IStopable Interface is true, "stop" can not be used as a input string because it is used to stop the program.
+     * if the IProgram class implements the IStopable Interface is true, "stop" can not be used as a input string because it is used to stop the IProgram.
      * @return the next String that the User put in the Console.
      */
     public String next() {
         String next = scanner.next();
-        if (program instanceof IStopable) {
+        if (IProgram instanceof IStopable) {
             if (next.equalsIgnoreCase("stop")) {
-                IStopable program = (IStopable) this.program;
+                IStopable program = (IStopable) this.IProgram;
                 program.stop();
                 return null;
             }
@@ -69,9 +69,9 @@ public class InternalScanner {
         while (true) {
             try {
                 String next = scanner.next();
-                if (program instanceof IStopable) {
+                if (IProgram instanceof IStopable) {
                     if (next.equalsIgnoreCase("stop")) {
-                        IStopable program = (IStopable) this.program;
+                        IStopable program = (IStopable) this.IProgram;
                         program.stop();
                         break;
                     }
