@@ -6,7 +6,11 @@
 | **DESCRIPTION**  | 
 Implement three different small programs which deal with calculations.Program no1: this program calculates the distance of lightning.Program no2: this program converts Celcius to Fahrenheit and vice versa.Program no3: this program calculates the age of a person.  |
 | **IDEA, EXAMPLE**  | 
-Program no1: Use the double datatype to calculate the distance. Sound travels one kilometer every three seconds. In order to calculate the distance, just divide the number of seconds by three. Program no2: This is a classic program and maybe you have already done this in C.  See how you can re-use your code from the previous module. If this a new program, then figure out what datatypes you should use. Let the user decide if he what temperature type he wants to calculate.  Program no3: Let the user enter his birthday (day, month, year) and convert this input into a suitable date object. Now calculate the exact age with the current time.  |
+Program no1: Use the double datatype to calculate the distance. Sound travels one kilometer every three seconds. In order to calculate the distance, just divide the number of seconds by three. 
+
+Program no2: This is a classic program and maybe you have already done this in C.  See how you can re-use your code from the previous module. If this a new program, then figure out what datatypes you should use. Let the user decide if he what temperature type he wants to calculate.  
+
+Program no3: Let the user enter his birthday (day, month, year) and convert this input into a suitable date object. Now calculate the exact age with the current time.  |
 | **DIFFICULTY**  | 
 Using the correct datatypes for the calculations. Using the correct date type to calculate the age. |
 | **SCALABILITY**  | 
