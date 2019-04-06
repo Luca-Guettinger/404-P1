@@ -1,18 +1,17 @@
-package components;
+package p1.components;
 
-import api.IProgram;
-import api.IStopable;
+import service.api.IProgram;
+import service.api.IStopable;
 
 /**
- * Main Service that is executed on Program start. This determins witch sub Service is started next!
+ * p1.Main Service that is executed on Program start. This determins witch sub Service is started next!
  */
 public class MainService implements IProgram, IStopable {
 
-    @Override
     public void execute() {
         printHelp();
 
-        var input = this.getScanner().next();
+        String input = this.getScanner().next();
 
         while (input != null) {
             switch (input) {

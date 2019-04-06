@@ -1,7 +1,7 @@
-import components.MainService;
+package p1;
 
 public class Main {
     public static void main(String[] args) {
-        new MainService().execute();
+        new p1.components.MainService().execute();
     }
 }

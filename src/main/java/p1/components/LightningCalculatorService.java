@@ -1,6 +1,6 @@
-package components;
+package p1.components;
 
-import api.IProgram;
+import service.api.IProgram;
 
 /**
  * This service allows us to investigate the distance of a storm by calculating time "t"

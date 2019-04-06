@@ -1,11 +1,8 @@
-package components;
+package p1.components;
 
-import api.IStopable;
-import api.IProgram;
+import service.api.IProgram;
+import service.api.IStopable;
 
-/**
- *
- */
 public class CelsiusToFahrenheitService implements IProgram, IStopable {
     @Override
     public void execute() {

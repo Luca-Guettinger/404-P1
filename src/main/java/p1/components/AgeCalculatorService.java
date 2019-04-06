@@ -1,7 +1,7 @@
-package components;
+package p1.components;
 
-import api.IProgram;
-import api.IStopable;
+import service.api.IProgram;
+import service.api.IStopable;
 
 import java.time.LocalDate;
 import java.time.Period;
