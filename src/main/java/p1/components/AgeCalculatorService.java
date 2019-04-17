@@ -1,6 +1,6 @@
 package p1.components;
 
-import service.api.IProgram;
+import service.api.AbstractProgram;
 import service.api.IStopable;
 
 import java.time.LocalDate;
@@ -10,7 +10,7 @@ import java.time.Period;
  * This service allows us to calculate the age of a person in years. We gather the birth date with the Pattern "dd-mm-yyyy"
  * and calculate the space between then and now by java integrated LocalDate class. We return the amount of years.
  */
-public class AgeCalculatorService implements IProgram, IStopable {
+public class AgeCalculatorService extends AbstractProgram implements IStopable {
 
     @Override
     public void execute() {
@@ -21,7 +21,7 @@ public class AgeCalculatorService implements IProgram, IStopable {
         if (birthday == null)
             return;
 
-        var years = Period.between(birthday, LocalDate.now()).getYears();
+        int years = Period.between(birthday, LocalDate.now()).getYears();
 
         System.out.println("you are " + years + " years old!");
     }

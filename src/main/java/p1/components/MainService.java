@@ -1,12 +1,12 @@
 package p1.components;
 
-import service.api.IProgram;
+import service.api.AbstractProgram;
 import service.api.IStopable;
 
 /**
  * p1.Main Service that is executed on Program start. This determins witch sub Service is started next!
  */
-public class MainService implements IProgram, IStopable {
+public class MainService extends AbstractProgram implements IStopable {
 
     public void execute() {
         printHelp();

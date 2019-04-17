@@ -1,15 +1,15 @@
 package p1.components;
 
-import service.api.IProgram;
+import service.api.AbstractProgram;
 import service.api.IStopable;
 
-public class CelsiusToFahrenheitService implements IProgram, IStopable {
+public class CelsiusToFahrenheitService extends AbstractProgram implements IStopable {
     @Override
     public void execute() {
         System.out.println("1 - from Celsius to Fahrenheit");
         System.out.println("2 - from Fahrenheit to Celsius");
 
-        var input = getScanner().next();
+        String input = getScanner().next();
         switch (input) {
             case "1":
                 System.out.println("Enter temperature in Celsius");
